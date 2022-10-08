@@ -1,0 +1,22 @@
+:root {
+  --container-width: 90%;
+  --header-height: 3.5em;
+} /*# sourceMappingURL=variables.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+} /*# sourceMappingURL=standard.css.map */
+header {
+  height: var(--header-height);
+  background: blue;
+} /*# sourceMappingURL=header.css.map *//*# sourceMappingURL=main.css.map */
