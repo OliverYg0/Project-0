@@ -1,4 +1,84 @@
 header {
+  width: 100%;
+  position: fixed;
+  background: #2c2c2c;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: var(--header-height);
-  background: blue;
+}
+header nav .logo {
+  font-weight: bold;
+}
+header nav .nav-items {
+  list-style: none;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-toggle .nav-toggle-bar {
+    width: 1.7em;
+    height: 0.25em;
+    background: #f1f1f1;
+    margin-bottom: 0.25em;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-duration) ease-in-out, background var(--transition-duration) ease-in-out;
+  }
+  .nav-toggle .nav-toggle-bar:last-child {
+    margin-bottom: 0;
+  }
+  .nav-toggle.nav-active .nav-toggle-bar:first-child {
+    transform-origin: center;
+    transform: translateY(0.5em) rotate(45deg);
+  }
+  .nav-toggle.nav-active .nav-toggle-bar:nth-child(2) {
+    z-index: -1000;
+    background: #2c2c2c;
+  }
+  .nav-toggle.nav-active .nav-toggle-bar:last-child {
+    transform-origin: center;
+    transform: translateY(-0.5em) rotate(-45deg);
+  }
+  .nav-items {
+    position: fixed;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    min-height: 350px;
+    flex-direction: column;
+    justify-content: center;
+    background: #0a0a0a;
+    transition: transform var(--transition-duration) ease-in-out;
+  }
+  .nav-items .nav-item {
+    width: var(--container-width);
+    margin: 0 auto;
+    border-top: 2px solid #2c2c2c;
+  }
+  .nav-items .nav-item:last-child {
+    border-bottom: 2px solid #2c2c2c;
+  }
+  .nav-items .nav-item .nav-link {
+    display: block;
+    width: 100%;
+    line-height: var(--header-height);
+  }
+  .nav-items.nav-active {
+    transform: translateX(100%);
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav-items {
+    width: 45%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .nav-items {
+    width: 30%;
+  }
 }/*# sourceMappingURL=header.css.map */
