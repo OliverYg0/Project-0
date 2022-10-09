@@ -6,8 +6,11 @@ app.use(express.static('public'))
 
 app.set('view engine', 'ejs')
 
-app.get('/test', (req, res) => {
-    res.render('test', {text: 'Hello there, this is the test page.'})
+app.get('/', (req, res) => {
+    context = {
+        title: 'Home'
+    }
+    res.render('index', context)
 })
 
 app.listen(port, () => {
