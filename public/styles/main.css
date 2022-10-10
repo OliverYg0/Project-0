@@ -1,5 +1,5 @@
 :root {
-  --container-width: 90%;
+  --container-width: 85%;
   --border-radius: 12px;
   --border-width: 0;
   --transition-duration: 200ms;
@@ -34,11 +34,15 @@ body.paused-scrolling {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+main {
+  padding-top: var(--header-height);
 } /*# sourceMappingURL=standards.css.map */
 header {
   width: 100%;
   position: fixed;
-  background: #2c2c2c;
+  background: #0a0a0a;
 }
 
 header nav {
@@ -55,6 +59,14 @@ header nav .logo {
 header nav .nav-items {
   list-style: none;
   display: flex;
+}
+
+header nav .nav-items .nav-link {
+  transition: color var(--transition-duration) ease-in-out;
+}
+
+header nav .nav-items .nav-link:hover {
+  color: #aaaaaa;
 }
 
 @media screen and (max-width: 768px) {
@@ -75,7 +87,7 @@ header nav .nav-items {
   }
   .nav-toggle.nav-active .nav-toggle-bar:nth-child(2) {
     z-index: -1000;
-    background: #2c2c2c;
+    background: inherit;
   }
   .nav-toggle.nav-active .nav-toggle-bar:last-child {
     transform-origin: center;
@@ -96,10 +108,7 @@ header nav .nav-items {
   .nav-items .nav-item {
     width: var(--container-width);
     margin: 0 auto;
-    border-top: 2px solid #2c2c2c;
-  }
-  .nav-items .nav-item:last-child {
-    border-bottom: 2px solid #2c2c2c;
+    border-top: 2px solid #1a1a1a;
   }
   .nav-items .nav-item .nav-link {
     display: block;
@@ -112,13 +121,37 @@ header nav .nav-items {
 }
 @media screen and (min-width: 768px) {
   .nav-items {
-    width: 45%;
+    min-width: 480px;
     justify-content: space-between;
     align-items: center;
   }
 }
 @media screen and (min-width: 1000px) {
   .nav-items {
-    width: 30%;
+    width: 40%;
   }
-} /*# sourceMappingURL=header.css.map *//*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=header.css.map */
+.btn, .header-btn {
+  display: inline-block;
+  padding: 0.45em 1.5em;
+  background: #1100ff;
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-weight: bold;
+  transition: background var(--transition-duration) ease-in-out;
+}
+
+.btn:hover, .header-btn:hover {
+  background: #0b00a3;
+}
+
+.header-btn {
+  max-height: var(--header-height);
+}
+
+@media screen and (max-width: 768px) {
+  .header-btn {
+    margin-top: 1.5em;
+    padding: 0;
+  }
+} /*# sourceMappingURL=buttons.css.map *//*# sourceMappingURL=main.css.map */

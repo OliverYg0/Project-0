@@ -1,0 +1,24 @@
+.btn, .header-btn {
+    display: inline-block;
+    padding: .45em 1.5em;
+    background: #1100ff;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: bold;
+    transition: background var(--transition-duration) ease-in-out;
+    &:hover {
+        background: #0b00a3;
+
+    }
+}
+
+.header-btn {
+    max-height: var(--header-height);
+}
+
+@media screen and (max-width: 768px) {
+    .header-btn {
+        margin-top: 1.5em;
+        padding: 0;
+    }
+}
