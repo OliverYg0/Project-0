@@ -2,8 +2,8 @@
   --border-radius: 12px;
   --border-width: 0;
   --transition-duration: 250ms;
-  --transparency: .6;
-  --blur: 16px;
+  --transparency: 1;
+  --blur: 0;
   --container-width: 85%;
   --header-height: 4em;
 }/*# sourceMappingURL=variables.css.map */

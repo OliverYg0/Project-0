@@ -45,17 +45,3 @@ window.onscroll = function() {
   
   prevScrollpos = currentScrollPos;
 }
-
-// Settings Section
-const root = document.querySelector(':root')
-const settingsSubmitBtn = document.querySelector('.settings-submit-btn')
-const borderRadiusInput = document.querySelector('#border-radius-input')
-
-settingsSubmitBtn.addEventListener('click', () => {
-    style = borderRadiusInput.value
-
-    if (style.length > 0) {
-        style += 'px'
-        root.style.setProperty('--border-radius', style)
-    }
-})

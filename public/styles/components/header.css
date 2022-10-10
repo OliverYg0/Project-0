@@ -5,6 +5,7 @@ header {
   background: rgba(10, 10, 10, var(--transparency));
   -webkit-backdrop-filter: blur(var(--blur));
           backdrop-filter: blur(var(--blur));
+  z-index: 1000;
 }
 header nav {
   display: flex;
@@ -55,7 +56,7 @@ header nav .nav-items .nav-link:hover {
   }
   .nav-items {
     position: fixed;
-    bottom: 0;
+    top: var(--header-height);
     left: -100%;
     width: 100%;
     height: calc(100vh - var(--header-height));

@@ -2,8 +2,8 @@
   --border-radius: 12px;
   --border-width: 0;
   --transition-duration: 250ms;
-  --transparency: .6;
-  --blur: 16px;
+  --transparency: 1;
+  --blur: 0;
   --container-width: 85%;
   --header-height: 4em;
 } /*# sourceMappingURL=variables.css.map */
@@ -41,7 +41,6 @@ main {
 @media screen and (max-width: 768px) {
   body.paused-scrolling {
     overflow: hidden;
-    height: 100vh;
   }
 } /*# sourceMappingURL=standards.css.map */
 header {
@@ -51,6 +50,7 @@ header {
   background: rgba(10, 10, 10, var(--transparency));
   -webkit-backdrop-filter: blur(var(--blur));
   backdrop-filter: blur(var(--blur));
+  z-index: 1000;
 }
 
 header nav {
@@ -106,7 +106,7 @@ header nav .nav-items .nav-link:hover {
   }
   .nav-items {
     position: fixed;
-    bottom: 0;
+    top: var(--header-height);
     left: -100%;
     width: 100%;
     height: calc(100vh - var(--header-height));
