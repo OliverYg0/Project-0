@@ -1,7 +1,9 @@
 :root {
-  --container-width: 85%;
   --border-radius: 12px;
   --border-width: 0;
-  --transition-duration: 200ms;
-  --header-height: 3.5em;
+  --transition-duration: 250ms;
+  --transparency: .6;
+  --blur: 16px;
+  --container-width: 85%;
+  --header-height: 4em;
 }/*# sourceMappingURL=variables.css.map */

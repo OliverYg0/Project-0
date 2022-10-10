@@ -30,6 +30,8 @@ navItem.forEach(element => {
     })
 });
 
+// show/hide header on scroll
+
 let prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
