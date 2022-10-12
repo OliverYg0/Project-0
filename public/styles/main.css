@@ -21,7 +21,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #0a0a0a;
   color: #f1f1f1;
-  height: 200vh;
 }
 
 .container {
@@ -38,8 +37,18 @@ main {
   padding-top: var(--header-height);
 }
 
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1em;
+  background: #1d1d1d;
+}
+
 @media screen and (max-width: 768px) {
   body.paused-scrolling {
+    height: 100%;
     overflow: hidden;
   }
 } /*# sourceMappingURL=standards.css.map */
@@ -77,6 +86,10 @@ header nav .nav-items .nav-link:hover {
   color: #aaaaaa;
 }
 
+header nav .nav-items .nav-link.current-link {
+  color: #1100ff;
+}
+
 @media screen and (max-width: 768px) {
   .nav-toggle .nav-toggle-bar {
     width: 1.7em;
@@ -105,17 +118,16 @@ header nav .nav-items .nav-link:hover {
     transform: translateY(-0.5em) rotate(-45deg);
   }
   .nav-items {
+    width: 100%;
+    min-height: 350px;
+    height: calc(100vh - var(--header-height));
+    background: #0a0a0a;
     position: fixed;
     top: var(--header-height);
     left: -100%;
-    width: 100%;
-    height: calc(100vh - var(--header-height));
-    min-height: 350px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    background: rgba(10, 10, 10, var(--transparency));
-    -webkit-backdrop-filter: blur(var(--blur));
-    backdrop-filter: blur(var(--blur));
     transition: transform var(--transition-duration) ease-in-out;
   }
   .nav-items .nav-item {
