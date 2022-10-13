@@ -1,9 +1,11 @@
 :root {
-  --border-radius: 12px;
-  --border-width: 0;
-  --transition-duration: 250ms;
-  --transparency: 1;
+  --border-radius: 14px;
+  --border-width: 2px;
   --blur: 0;
+  --transparency: 1;
+  --transition-duration: 250ms;
   --container-width: 85%;
   --header-height: 4em;
+  --secondary-color: #242333;
+  --accent-color: #01B0D3;
 }/*# sourceMappingURL=variables.css.map */

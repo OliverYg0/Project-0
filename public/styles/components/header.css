@@ -2,10 +2,11 @@ header {
   width: 100%;
   position: fixed;
   transition: top var(--transition-duration) ease-in-out;
-  background: rgba(10, 10, 10, var(--transparency));
+  background: var(--secondary-color);
   -webkit-backdrop-filter: blur(var(--blur));
           backdrop-filter: blur(var(--blur));
   z-index: 1000;
+  color: #f1f1f1;
 }
 header nav {
   display: flex;
@@ -24,10 +25,10 @@ header nav .nav-items .nav-link {
   transition: color var(--transition-duration) ease-in-out;
 }
 header nav .nav-items .nav-link:hover {
-  color: #aaaaaa;
+  color: var(--accent-color) !important;
 }
 header nav .nav-items .nav-link.current-link {
-  color: #1100ff;
+  color: var(--accent-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -61,7 +62,9 @@ header nav .nav-items .nav-link.current-link {
     width: 100%;
     min-height: 350px;
     height: calc(100vh - var(--header-height));
-    background: #0a0a0a;
+    background: var(--secondary-color);
+    -webkit-backdrop-filter: blur(--blur);
+            backdrop-filter: blur(--blur);
     position: fixed;
     top: var(--header-height);
     left: -100%;
@@ -73,7 +76,7 @@ header nav .nav-items .nav-link.current-link {
   .nav-items .nav-item {
     width: var(--container-width);
     margin: 0 auto;
-    border-top: 2px solid rgba(26, 26, 26, var(--transparency));
+    border-top: 2px solid rgba(43, 42, 61, var(--transparency));
   }
   .nav-items .nav-item .nav-link {
     display: block;

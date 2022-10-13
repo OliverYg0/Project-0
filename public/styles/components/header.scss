@@ -2,9 +2,11 @@ header {
     width: 100%;
     position: fixed;
     transition: top var(--transition-duration) ease-in-out;
-    background: rgba($color: #0a0a0a, $alpha: var(--transparency));
+    // background: rgba($color: #090446, $alpha: var(--transparency));
+    background: var(--secondary-color);
     backdrop-filter: blur(var(--blur));
     z-index: 1000;
+    color: #f1f1f1;
     nav {
         display: flex;
         justify-content: space-between;
@@ -19,10 +21,10 @@ header {
             .nav-link {
                 transition: color var(--transition-duration) ease-in-out;
                 &:hover {
-                    color: #aaaaaa;
+                    color: var(--accent-color) !important;
                 }
                 &.current-link {
-                    color: #1100ff;
+                    color: var(--accent-color);
                 }
             }
         }
@@ -69,7 +71,8 @@ header {
         width: 100%;
         min-height: 350px;
         height: calc(100vh - var(--header-height));
-        background: #0a0a0a;
+        background: var(--secondary-color);
+        backdrop-filter: blur(--blur);
         position: fixed;
         top: var(--header-height);
         left: -100%;
@@ -80,7 +83,7 @@ header {
         .nav-item {
             width: var(--container-width);
             margin: 0 auto;
-            border-top: 2px solid rgba($color: #1a1a1a, $alpha: var(--transparency));
+            border-top: 2px solid rgba($color: #2b2a3d, $alpha: var(--transparency));
             .nav-link {
                 display: block;
                 width: 100%;

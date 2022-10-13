@@ -3,7 +3,6 @@ let navActive = false;
 
 pauseScrolling = () => {
     document.body.classList.toggle('paused-scrolling')
-    console.log('toggled')
 }
 
 const header = document.querySelector('header')

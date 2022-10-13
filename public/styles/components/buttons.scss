@@ -1,24 +1,51 @@
-.btn, .header-btn {
+.primary-btn, .secondary-btn, .header-btn {
     display: inline-block;
-    padding: .45em 1.5em;
-    background: #1100ff;
-    border-radius: calc(var(--border-radius) / 2);
-    text-align: center;
+    padding: 1em 2em;
+    border-radius: var(--border-radius);
     font-weight: bold;
-    transition: background var(--transition-duration) ease-in-out;
-    &:hover {
-        background: #0b00a3;
+    transition: background var(--transition-duration) ease-in-out,
+                color var(--transition-duration) ease-in-out;
+}
 
+.primary-btn, .header-btn {
+    background: var(--accent-color);
+    &:hover {
+        border: var(--border-width) solid var(--accent-color);
+        color: var(--accent-color);
+        background: none; 
+    }
+}
+
+.primary-btn:hover {
+    padding: calc(1em - var(--border-width)) calc(2em - var(--border-width));
+}
+
+.secondary-btn {
+    border: var(--border-width) solid var(--accent-color);
+    padding: calc(1em - var(--border-width)) 2em;
+    color: var(--accent-color);
+    &:hover {
+        background: var(--accent-color);
+        color: #f1f1f1;
     }
 }
 
 .header-btn {
     max-height: var(--header-height);
+    padding: .6em 1.5em;
+    &:hover {
+        background: none;
+        padding: calc(.6em - var(--border-width)) calc(1.5em - var(--border-width));
+    }
 }
 
 @media screen and (max-width: 768px) {
     .header-btn {
         margin-top: 1.5em;
         padding: 0;
+        text-align: center;
+        &:hover {
+            padding: 0;
+        }
     }
 }

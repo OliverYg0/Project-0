@@ -10,8 +10,7 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0a0a0a;
-    color: #f1f1f1;
+    background: #f1f1f1;
 }
 
 .container {
@@ -24,17 +23,23 @@ a {
     color: inherit;
 }
 
-main {
-    padding-top: var(--header-height);
+h1 {
+    font-size: 3.5em;
 }
 
+.sub-header {
+    font-size: 1.25em;
+    margin: .8em 0 1.5em 0;
+}
+
+// main {
+//     padding-top: var(--header-height);
+// }
+
 section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 3em 0;
     margin-bottom: 1em;
-    background: #1d1d1d;
+    background: #afafaf;
 }
 
 @media screen and (max-width: 768px) {
@@ -43,5 +48,9 @@ section {
             height: 100%;
             overflow: hidden;
         }
+    }
+
+    h1 {
+        font-size: 2.75em;
     }
 }
